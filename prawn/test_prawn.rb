@@ -28,4 +28,10 @@ class TestInlineStyleParsing < Test::Unit::TestCase
                   @pdf.parse_inline_styles("Hello <i>Fine <b>World</b></i>")
   end
 
+  must "not split out other tags than <i>, <b>, </i>, </b>" do
+    @pdf = Prawn::Document.new
+    assert_equal ["Hello <ruby>Ch", "<b>", "arl", "</b>", "ie</ruby>"],
+                  @pdf.parse_inline_styles("Hello <ruby>Ch<b>arl</b>ie</ruby>")
+  end
+
 end
