@@ -1,6 +1,6 @@
 require './prawn'
 require 'test/unit'
-require './test_unit_extensions'
+require '../test_unit_extensions'
 
 class TestInlineStyleParsing < Test::Unit::TestCase
 

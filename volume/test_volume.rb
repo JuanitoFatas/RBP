@@ -1,5 +1,5 @@
 require 'test/unit'
-require './test_unit_extensions'
+require '../test_unit_extensions'
 
 class VolumeTest < Test::Unit::TestCase
   must "compute volume based on length, width, and height" do
